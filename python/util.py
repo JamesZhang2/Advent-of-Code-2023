@@ -18,9 +18,24 @@ def get_numbers(s):
         numbers.append((int(s[start:len(s)]), start, len(s)))
     return numbers
 
+def get_digits(s):
+    """
+     Returns a list of (digit, idx) tuple, ordered increasingly by idx.
+    """
+    digits = []
+    for i, ch in enumerate(s):
+        if ch.isdigit():
+            digits.append((int(ch), i))
+    return digits
 
 print(get_numbers("123abc345bcd8"))
 print(get_numbers("9"))
 print(get_numbers("0abcd9523235d8d8p12"))
 print(get_numbers("abc456abc"))
 print(get_numbers("The quick brown fox jumps over the lazy dog!"))
+
+print(get_digits("123abc345bcd8"))
+print(get_digits("9"))
+print(get_digits("0abcd9523235d8d8p12"))
+print(get_digits("abc456abc"))
+print(get_digits("The quick brown fox jumps over the lazy dog!"))
