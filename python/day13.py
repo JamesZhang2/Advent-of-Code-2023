@@ -1,4 +1,4 @@
-with open("test13.txt") as file:
+with open("input13.txt") as file:
     lines = [line.strip() for line in file.readlines()]
 
 grids = []
